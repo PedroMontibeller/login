@@ -1,6 +1,8 @@
 # login
 Sistema de login em PHP e Javascript
 
+# aula 1 - 23/09/2019
+
 ---
 # Passo a passo em todo incio de aula
 
@@ -23,3 +25,5 @@ Sistema de login em PHP e Javascript
 
 ## Editar no VSCode
  - Clicar em "Abrir a pasta..." e abrir c:\xampp\htdocs\login
+
+### Clicar em origin no Github Desktop
