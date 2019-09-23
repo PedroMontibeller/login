@@ -5,12 +5,15 @@ Sistema de login em PHP e Javascript
 # Passo a passo em todo incio de aula
 
 ## Habilitar o Proxy
-Tecla Windows - Abrir a janela Prompt de Comando
-Copie e cole a linha abaixo - selecione e pressione as teclas Ctrl C
+ -Tecla Windows - Abrir a janela Prompt de Comando
+ -Copie e cole a linha abaixo - selecione e pressione as teclas Ctrl C
 
-git config --global http.proxy http://10.1.21.254:3128
+  git config --global http.proxy http://10.1.21.254:3128
 
-Pressione Enter
+  -Cole no prompt de comando
+  -Pressione Enter
 
 ## Clonar o repositório **login** na pasta **c:\xampp\htdocs**
-  Tecla Windows - Abrir o Github Desktop
+  -Tecla Windows - Abrir o Github Desktop
+  -Clique em *Sign in to Github.com*
+  -Digite seu login e Senha do Github
