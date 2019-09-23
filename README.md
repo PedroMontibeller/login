@@ -14,6 +14,7 @@ Sistema de login em PHP e Javascript
   - Pressione Enter
 
 ## Clonar o repositório **login** na pasta **c:\xampp\htdocs**
+  - Abrir Github Desktop e clonar o repositorio login na pasta htdocs
 
 ## Habilitar o servidor web **Apache** e o servidor **MySQL**
 
