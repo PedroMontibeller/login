@@ -14,3 +14,5 @@ Sistema de login em PHP e Javascript
   -Pressione Enter
 
 ## Clonar o repositório **login** na pasta **c:\xampp\htdocs**
+
+## Habilitar o servidor web **Apache** e o servidor **MySQL**
