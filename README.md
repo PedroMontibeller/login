@@ -14,6 +14,3 @@ Sistema de login em PHP e Javascript
   -Pressione Enter
 
 ## Clonar o repositório **login** na pasta **c:\xampp\htdocs**
-  -Tecla Windows - Abrir o Github Desktop
-  -Clique em *Sign in to Github.com*
-  -Digite seu login e Senha do Github
