@@ -18,7 +18,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                    Bootstrap
+                        Senai
                     </strong>
                 </div>
             </div>
@@ -28,11 +28,32 @@
         <section calss="row">
             <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixalogin">
                 <h2 class="text-center mt-2">
-                Entrar no Sistema
+                    Entrar no Sistema
                 </h2>
+
                 <form action="#" method="post" class="p-2" id="formlogin">
                     <div class="form-group">
-                        <input type="text" name="" id="">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
+                            <label for="lembrar" class="custom-control-label">Lembre-se de mim</label>
+                            <a href="#" class="float-right" id="btnEsqueci">Esqueci a senha</a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Entrar" name="btnEntrar" id="btnEntrar" class="btn btn-primary btn-block">
+                    </div>
+
+                    <div class="form-group">
+                        <p clas="text-center">Novo usuário? <a href="#" id="btnRegistrar">Registre-se aqui</a></p>
                     </div>
                 </form>
             </div>
