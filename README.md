@@ -2,7 +2,9 @@
 Sistema de login em PHP e Javascript
 
 # aula 3 - 30/09/2019
-
+- Formulário de Cadastro de novos usuários
+- Validação dos campos com jQuery validate
+- ~Ocultar e Mostrar os formulários com jQuery~
 
 # aula 2 - 24/09/2019
 Layout Bootstrap para os formulários
