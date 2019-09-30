@@ -1,6 +1,9 @@
 # login
 Sistema de login em PHP e Javascript
 
+# aula 3 - 30/09/2019
+
+
 # aula 2 - 24/09/2019
 Layout Bootstrap para os formulários
   - Formulário de login
@@ -9,6 +12,7 @@ Layout Bootstrap para os formulários
 
 # aula 1 - 23/09/2019
 Configuração do projeto Github, e criação do passo a passo
+
 ---
 # Passo a passo em todo incio de aula
 
