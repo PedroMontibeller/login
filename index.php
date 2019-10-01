@@ -32,7 +32,7 @@
 
         <!-- Formulário de login v -->
         <section calss="row">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixalogin">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" name="caixaLogin" id="caixaLogin">
                 <h2 class="text-center mt-2">
                     Entrar no Sistema
                 </h2>
@@ -68,7 +68,7 @@
 
         <!-- Formulário de recuperação de senha v -->
         <section class="row mt-5">
-            <div class="col-lg-4 offset-lg-4 bg-light rounded" id="caixaSenha">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" name="caixaSenha" id="caixaSenha">
                 <h2 class="text-center mt-2">Gerar Nova Senha</h2>
 
                 <form action="#" method="post" id="formSenha" class="p-2">
@@ -137,6 +137,27 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         //Código jQuery para mostrar formulários v
+        $(function() {
+            $("#btnEsqueci").click(function() {
+                $("#caixaLogin").hide();
+                $("#caixaSenha").show();
+            });
+
+            $("#btnRegistrarNovo").click(function() {
+                $("#caixaLogin").hide();
+                $("#caixaRegistro").show();
+            });
+
+            $("#btnJaRegistrado").click(function() {
+                $("#caixaRegistro").hide();
+                $("#caixaLogin").show();
+            });
+
+            $("#btnJaRegistrado2").click(function() {
+                $("#caixaRegistro").hide();
+                $("#caixaLogin").show();
+            });
+        });
     </script>
 </body>
 
