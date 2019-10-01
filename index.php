@@ -149,7 +149,7 @@
             });
 
             $("#btnJaRegistrado").click(function() {
-                $("#caixaRegistro").hide();
+                $("#caixaSenha").hide();
                 $("#caixaLogin").show();
             });
 
