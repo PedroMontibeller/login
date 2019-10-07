@@ -26,7 +26,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        Senai
+                        
                     </strong>
                 </div>
             </div>
@@ -175,9 +175,37 @@
                 $("#caixaRegistro").hide();
                 $("#caixaLogin").show();
             });
+
+            //Cadastro de novo usuario
+            $("#btnRegistrar").click(function(e) {
+                if (document.querySelector("#formRegistro").checkValidity()) {
+                    e.preventDefault(); //não abrir outra pagina
+                    $.ajax({ //envio dos dados via ajax
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formRegistro").serialize() + '&action=cadastro',
+                        success:function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
+            });
+
+            //Login
+            $("#btnEntrar").click(function(e) {
+
+            });
+
+            //Recuperacao de senha
+            $("#btnGerar").click(function(e) {
+
+            });
+
         });
         //jQuery para mostrar e ocultar formulários ^
-        
+
         jQuery.extend(jQuery.validator.messages, {
             required: "Este campo &eacute; requerido.",
             remote: "Por favor, corrija este campo.",
