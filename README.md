@@ -1,6 +1,10 @@
 # login
 Sistema de login em PHP e Javascript
 
+# aula06 - 07/10/2019
+- Envio de dados dos formularios de login e senha atravess de ajax
+- Criação de banco de dados em arquivo SQL
+
 # aula05 - 04/10/2019
 Envio de dados do front-end para o back-end, métodos GET e POST
 
