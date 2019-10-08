@@ -26,7 +26,7 @@
             <div class="col-lg-4 offset-lg-4" id="alerta">
                 <div class="alert alert-success text-center">
                     <strong class="resultado">
-                        
+
                     </strong>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                         url: 'recebe_dados.php',
                         method: 'post',
                         data: $("#formRegistro").serialize() + '&action=cadastro',
-                        success:function(resposta) {
+                        success: function(resposta) {
                             $("#alerta").show();
                             $(".resultado").html(resposta);
                         }
@@ -195,12 +195,36 @@
 
             //Login
             $("#btnEntrar").click(function(e) {
-
+                if (document.querySelector("#formLogin").checkValidity()) {
+                    e.preventDefault(); //não abrir outra pagina
+                    $.ajax({ //envio dos dados via ajax
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formLogin").serialize() + '&action=login',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
             });
 
             //Recuperacao de senha
             $("#btnGerar").click(function(e) {
-
+                if (document.querySelector("#formSenha").checkValidity()) {
+                    e.preventDefault(); //não abrir outra pagina
+                    $.ajax({ //envio dos dados via ajax
+                        url: 'recebe_dados.php',
+                        method: 'post',
+                        data: $("#formSenha").serialize() + '&action=senha',
+                        success: function(resposta) {
+                            $("#alerta").show();
+                            $(".resultado").html(resposta);
+                        }
+                    });
+                }
+                return true;
             });
 
         });
