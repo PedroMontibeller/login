@@ -1,4 +1,13 @@
 <?php
+//conexao com o DB
+require_once 'configDB.php';
+function verificar_entrada($entrada){
+    $saida = htmlspecialchars($entrada);
+    $saida = stripslashes($saida);
+    $saida = trim($saida);
+    return $saida // retorna a saida limpa
+}
+
 if(isset($_POST['action'])){
     if($_POST['action'] == 'cadastro'){
         echo "\n<p>cadastro</p>\n";
