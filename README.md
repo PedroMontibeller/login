@@ -2,7 +2,7 @@
 Sistema de login em PHP e Javascript
 
 # aula07 - 15/10/2019
-
+Persistência de dados no banco de dados
 
 # aula06 - 07/10/2019
 - Envio de dados dos formularios de login e senha atravess de ajax
@@ -52,4 +52,8 @@ Configuração do projeto Github, e criação do passo a passo
 ## Editar no VSCode
  - Clicar em "Abrir a pasta..." e abrir c:\xampp\htdocs\login
 
-### Clicar em origin no Github Desktop
+### Fazer o commit e clicar em push origin no Github Desktop
+
+## Importar o DB
+- Acessar localhost/phpmyadmin
+- Clicar em importar, selecionar em Browse o arquivo 127.0.0.1 e executar
