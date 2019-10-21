@@ -1,4 +1,7 @@
 <?php
+//iniciando a sessão
+session_start();
+
 //conexao com o DB
 require_once 'configDB.php';
 function verificar_entrada($entrada){
@@ -71,10 +74,11 @@ if(isset($_POST['action'])){
             $busca = $sql->fetch();
 
             if($busca != null){
+                $_SESSION['nomeUsuario'] = $nomeUsuario;
                 echo "ok";
             }else{
                 echo "<p class='text-danger'>";
-                echo "Falhou o Login";
+                echo "Falhou o Login. Nome ou senha invalidos.";
                 echo "</p>";
                 exit();
             }

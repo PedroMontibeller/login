@@ -1,5 +1,8 @@
+<?php
+    require_once "session.php";
+?>
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +31,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Sobre</a>
                     <a class="dropdown-item" href="#">Fotos</a>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <a class="dropdown-item" href="sair.php">Sair</a>
                 </div>
                 </li>
             </ul>
