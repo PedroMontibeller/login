@@ -1,8 +1,5 @@
 <?php
     require_once "session.php";
-    //$dia = date('d');
-    //$mes = date('m');
-    //$ano = date('Y');
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -45,7 +42,7 @@
         <div class="container">
             <h1 class="display-4">Boas Vindas</h1>
             <h2 class="display-2 text-center bg-primary rounded p-1 text-light"><?=$nomeCompleto?></h2>
-            <h2 class="text-center"><a href="mailto:<?=$emailUsuario?>"></a></h2>
+            <h2 class="text-center"><a href="mailto:"><?=$emailUsuario?></a></h2>
             <h3 class="text-center">Registrado em: <?=$dataCriado?></h3>
         </div>
     </div>

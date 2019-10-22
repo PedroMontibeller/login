@@ -75,6 +75,14 @@ if(isset($_POST['action'])){
 
             if($busca != null){
                 $_SESSION['nomeUsuario'] = $nomeUsuario;
+
+                if(!empty($_POST['lembrar'])){ //se lebrar nao estiver vazaio
+                    setcookie("nomeUsuario", $nomeUsuario, time()+(60*60*24*30));
+                    setcookie("senhaUsuario", $senhaUsuario, time()+(60*60*24*30));
+                }else{ //a pessoa quer ser lembrada
+                    setcookie("nomeUsuario", "");
+                    setcookie("senhaUsuario", "");
+                }
                 echo "ok";
             }else{
                 echo "<p class='text-danger'>";

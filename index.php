@@ -41,16 +41,19 @@
 
                 <form action="#" method="post" class="p-2" id="formLogin">
                     <div class="form-group">
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" required minlength="5">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" 
+                        required minlength="5" value="<?= isset($_COOKIE['nomeUsuario'])?$_COOKIE['nomeUsuario']:""; ?>">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" 
+                        required minlength="6" value="<?= isset($_COOKIE['senhaUsuario'])?$_COOKIE['senhaUsuario']:""; ?>">
                     </div>
 
                     <div class="form-group mt-4">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input">
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input" 
+                            <?= isset($_COOKIE['nomeUsuario'])?" checked":""; ?>>
                             <label for="lembrar" class="custom-control-label">Lembre-se de mim</label>
                             <a href="#" class="float-right" id="btnEsqueci">Esqueci a senha</a>
                         </div>
@@ -103,13 +106,14 @@
                         <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome Completo" required minlength="6">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome de Usuário" required minlength="5">
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome de Usuário" required minlength="5" >
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" required minlength="6">
+                        <input type="password" name="senha" id="senha" class="form-control" 
+                        placeholder="Senha" required minlength="6">
                     </div>
                     <div class="form-group">
                         <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control" placeholder="Confirmar senha" required minlength="6">
