@@ -2,7 +2,7 @@
 Sistema de login em PHP e Javascript
 
 # aula10 - 22/10/2019
-
+- Finalizado a autenticação com o perfil e cookies
 
 # aula09 - 21/10/2019
 - Autenticação do usuario e acesso ao perfil
