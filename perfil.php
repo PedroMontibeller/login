@@ -1,5 +1,8 @@
 <?php
     require_once "session.php";
+    //$dia = date('d');
+    //$mes = date('m');
+    //$ano = date('Y');
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -26,7 +29,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Perfil
+                    <?= $nomeUsuario ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Sobre</a>
@@ -41,9 +44,9 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Boas Vindas</h1>
-            <h2 class="display-2 text-center bg-primary rounded p-1 text-light">Nome Completo</h2>
-            <h2 class="text-center">email@gmail.com</h2>
-            <h3 class="text-center">Registrado em: 18/10/2019</h3>
+            <h2 class="display-2 text-center bg-primary rounded p-1 text-light"><?=$nomeCompleto?></h2>
+            <h2 class="text-center"><a href="mailto:<?=$emailUsuario?>"></a></h2>
+            <h3 class="text-center">Registrado em: <?=$dataCriado?></h3>
         </div>
     </div>
 
