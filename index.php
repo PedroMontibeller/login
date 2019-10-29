@@ -14,7 +14,8 @@
     <style>
         #alerta,
         #caixaSenha,
-        #caixaRegistro {
+        #caixaRegistro,
+        #caixaNovo {
             display: none;
         }
     </style>
@@ -35,25 +36,20 @@
         <!-- Formulário de login v -->
         <section calss="row">
             <div class="col-lg-4 offset-lg-4 bg-light rounded" name="caixaLogin" id="caixaLogin">
-                <h2 class="text-center mt-2">
-                    Entrar no Sistema
-                </h2>
+                <h2 class="text-center mt-2">Entrar no Sistema</h2>
 
                 <form action="#" method="post" class="p-2" id="formLogin">
                     <div class="form-group">
-                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" 
-                        required minlength="5" value="<?= isset($_COOKIE['nomeUsuario'])?$_COOKIE['nomeUsuario']:""; ?>">
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Nome de Usuário" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="senhaUsuario" id="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" 
-                        required minlength="6" value="<?= isset($_COOKIE['senhaUsuario'])?$_COOKIE['senhaUsuario']:""; ?>">
+                        <input type="password" name="senhaUsuario" id="senhaUsuario" id="senhaUsuario" placeholder="Senha" class="form-control" required minlength="6" value="<?= isset($_COOKIE['senhaUsuario']) ? $_COOKIE['senhaUsuario'] : ""; ?>">
                     </div>
 
                     <div class="form-group mt-4">
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input" 
-                            <?= isset($_COOKIE['nomeUsuario'])?" checked":""; ?>>
+                            <input type="checkbox" name="lembrar" id="lembrar" class="custom-control-input" <?= isset($_COOKIE['nomeUsuario']) ? " checked" : ""; ?>>
                             <label for="lembrar" class="custom-control-label">Lembre-se de mim</label>
                             <a href="#" class="float-right" id="btnEsqueci">Esqueci a senha</a>
                         </div>
@@ -66,10 +62,73 @@
                     <div class="form-group">
                         <p clas="text-center">Novo usuário? <a href="#" id="btnRegistrarNovo">Registre-se aqui</a></p>
                     </div>
+
+                    <div class="form-group">
+                        <input type="button" value="Mostrar" name="btnMostrar" id="btnMostrar" class="btn btn-primary btn-block">
+                    </div>
                 </form>
             </div>
         </section>
         <!-- Formulário de login ^ -->
+
+        <!-- Formulário NOVO v -->
+        <section calss="row">
+            <div class="col-lg-4 offset-lg-4 bg-light rounded" name="caixaNovo" id="caixaNovo">
+                <h2 class="text-center mt-2">Novo</h2>
+                <form action="#" method="post" class="p-2" id="formNovo">
+                    <div class="form-group">
+                        <input type="text" name="nomeUsuarioNovo" id="nomeUsuarioNovo" placeholder="Nome Completo" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="emailNovo" id="emailNovo" placeholder="Email" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="date" name="AniversarioNovo" id="AniversarioNovo" placeholder="" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="url" name="urlNovo" id="urlNovo" placeholder="Contato" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="url" name="urlImagemNovo" id="urlImagemNovo" placeholder="Imagem" class="form-control" required minlength="5" value="<?= isset($_COOKIE['nomeUsuario']) ? $_COOKIE['nomeUsuario'] : ""; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select name="estado" id="estado" class="form-control">
+                            <option></option>
+                            <option value="PR">Paraná</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="SC">Santa Catarina</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <select name="cidade" id="cidade" class="form-control">
+                            <option></option>
+                            <option value="brusque">Brusque</option>
+                            <option value="gaspar">Gaspar</option>
+                            <option value="itajai">Itajaí</option>
+                            <option value="guabiruba">Guabiruba</option>
+                            <option value="botuvera">Botuverá</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Enviar" name="btnEnviarNovo" id="btnEnviarNovo" class="btn btn-primary btn-block">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="button" value="Voltar" name="btnVoltar" id="btnVoltar" class="btn btn-primary btn-block">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Formulário NOVO ^ -->
 
         <!-- Formulário de recuperação de senha v -->
         <section class="row mt-5">
@@ -106,14 +165,16 @@
                         <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" placeholder="Nome Completo" required minlength="6">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome de Usuário" required minlength="5" >
+                        <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome de Usuário" required minlength="5">
                     </div>
                     <div class="form-group">
                         <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" name="senha" id="senha" class="form-control" 
-                        placeholder="Senha" required minlength="6">
+                        <input type="url" name="urlImagemPerfil" id="urlImagemPerfil" class="form-control" placeholder=" URL de Foto de Perfil" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" required minlength="6">
                     </div>
                     <div class="form-group">
                         <input type="password" name="confirmarSenha" id="confirmarSenha" class="form-control" placeholder="Confirmar senha" required minlength="6">
@@ -163,6 +224,16 @@
             $("#btnEsqueci").click(function() {
                 $("#caixaLogin").hide();
                 $("#caixaSenha").show();
+            });
+
+            $("#btnMostrar").click(function() {
+                $("#caixaLogin").hide();
+                $("#caixaNovo").show();
+            });
+
+            $("#btnVoltar").click(function() {
+                $("#caixaNovo").hide();
+                $("#caixaLogin").show();
             });
 
             $("#btnRegistrarNovo").click(function() {

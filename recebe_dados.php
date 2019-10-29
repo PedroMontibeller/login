@@ -23,6 +23,7 @@ if(isset($_POST['action'])){
         $senha = verificar_entrada($_POST['senha']);
         $confirmarSenha = verificar_entrada($_POST['confirmarSenha']);
         $dataCriado = date("Y-m-d");
+        $urlImagemPerfil = verificar_entrada($_POST['urlImagemPerfil']);
 
         //codificando as senha
         $senhaCodificada = sha1($senha);
@@ -52,9 +53,9 @@ if(isset($_POST['action'])){
             }elseif($linha['email'] == $email){
                 echo "<p class='text-danger'>Email indisponivel</p>";
             }else{
-                $sql = $connect->prepare("INSERT into usuario (nomeUsuario, nomeCompleto, emailUsuario, senhaUsuario, dataCriado)
-                values(?, ?, ?, ?, ?)");
-                $sql->bind_param("sssss", $nome, $nomeCompleto, $email, $senhaCodificada, $dataCriado);
+                $sql = $connect->prepare("INSERT into usuario (nomeUsuario, nomeCompleto, emailUsuario, senhaUsuario, dataCriado, urlImagemPerfil)
+                values(?, ?, ?, ?, ?, ?)");
+                $sql->bind_param("ssssss", $nome, $nomeCompleto, $email, $senhaCodificada, $dataCriado, $urlImagemPerfil);
                 if($sql->execute()){
                     echo "<p class='text-success'>Usuario cadastrado</p>";
                 }else{

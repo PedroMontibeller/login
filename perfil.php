@@ -1,8 +1,9 @@
 <?php
-    require_once "session.php";
+require_once "session.php";
 ?>
 <!doctype html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +11,7 @@
 
     <title>Página de perfil</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Senai</a>
@@ -26,13 +28,13 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?= $nomeUsuario ?>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Sobre</a>
-                    <a class="dropdown-item" href="#">Fotos</a>
-                    <a class="dropdown-item" href="sair.php">Sair</a>
-                </div>
+                        <?= $nomeUsuario ?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Sobre</a>
+                        <a class="dropdown-item" href="#">Fotos</a>
+                        <a class="dropdown-item" href="sair.php">Sair</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -41,15 +43,22 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Boas Vindas</h1>
-            <h2 class="display-2 text-center bg-primary rounded p-1 text-light"><?=$nomeCompleto?></h2>
-            <h2 class="text-center"><a href="mailto:"><?=$emailUsuario?></a></h2>
-            <h3 class="text-center">Registrado em: <?=$dataCriado?></h3>
+            <h2 class="display-2 text-center bg-primary rounded p-1 text-light"><?= $nomeCompleto ?></h2>
+
+            <div class="row">
+                <div class="col-4"><img class="img-thumbnail" src="<?= $urlImagemPerfil ?>"></div>
+                <div class="col-8">
+                    <h2 class="text-center"><a href="mailto:"><?= $emailUsuario ?></a></h2>
+                    <h3 class="text-center">Registrado em: <?= $dataCriado ?></h3>
+                </div>
+            </div>
         </div>
     </div>
 
-        <!-- Optional JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
 </html>
