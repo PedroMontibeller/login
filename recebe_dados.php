@@ -29,13 +29,6 @@ if(isset($_POST['action'])){
         $senhaCodificada = sha1($senha);
         $senhaConfirmarCod = sha1($confirmarSenha);
 
-        //teste de captura de dados
-        // echo "<p>Nome Completo: $nomeCompleto </p>";
-        // echo "<p>Nome de Usuario: $nome </p>";
-        // echo "<p>Email: $email </p>";
-        // echo "<p>Senha Codificada: $senhaCodificada </p>";
-        // echo "<p>Data de Criação: $dataCriado </p>";
-
         if($senhaCodificada != $senhaConfirmarCod){
             echo "<p class='text-danger'>Senhas não conferem</p>";
             exit();

@@ -9,12 +9,12 @@ require_once "session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Página de perfil</title>
+    <title>Fotos de perfil</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Senai</a>
+        <a class="navbar-brand" href="#">Fotos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,7 +32,6 @@ require_once "session.php";
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Sobre</a>
-                        <a class="dropdown-item" href="fotos.php">Fotos</a>
                         <a class="dropdown-item" href="sair.php">Sair</a>
                     </div>
                 </li>
@@ -40,19 +39,31 @@ require_once "session.php";
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Boas Vindas</h1>
-            <h2 class="display-2 text-center bg-primary rounded p-1 text-light"><?= $nomeCompleto ?></h2>
-
-            <div class="row">
-                <div class="col-4"><img class="img-thumbnail" src="<?= $urlImagemPerfil ?>"></div>
-                <div class="col-8">
-                    <h2 class="text-center"><a href="mailto:"><?= $emailUsuario ?></a></h2>
-                    <h3 class="text-center">Registrado em: <?= $dataCriado ?></h3>
-                </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/tigre.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/pacoca.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/jacquin.jpg" class="d-block w-100">
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
     </div>
 
     <!-- Optional JavaScript -->
