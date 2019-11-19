@@ -85,13 +85,22 @@ if(isset($_POST['action'])){
                 exit();
             }
         }else if($_POST['action'] == 'senha'){
-        echo "\n<p>senha</p>\n";
-        echo "\n<pre>";
-        print_r($_POST);
-        echo "\n</pre>";
-    }else{
-    header("location:index.php");
-    }
-}else{
-    header("location:index.php");
+            $email = verificar_entrada($_POST['emailGerarSenha']);
+            $sql = $connect->prepare("SELECT idUsuario FROM usuario WHERE emailUsuario = ?");
+            $sql->bind_param("s", $email);
+            $sql->execute();
+            $resposta = $sql->get_result();
+            if($resposta->num_rows > 0){
+                //echo "Email encontrado";
+                $frase= "a1s2d3f4g5h6j7k8l9p0zxcvbnmqwertyuio";
+                $palavra_secreta = str_shuffle($frase);
+                $token = substr($palavra_secreta,0,10);
+                //echo "Toke: $token";
+                $sql = $connect->prepare("UPDATE usuario SET token=?, tempoDeVida=DATE_ADD(NOW(), INTERVAL 5 MINUTE) WHERE emailUsuario =?");
+                $sql->bind_param("ss", $token, $email);
+                $sql->execute();
+            }else{
+                header("location:index.php");
+            }
+        }
 }

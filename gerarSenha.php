@@ -1,3 +1,15 @@
+<?php
+    if(isset($_GET['token']) && isset($_GET['email'])){
+        require_once 'configDB.php';
+        $email = $_GET['email'];
+        $token = $_GET['token'];
+        $msg = "$email : $token";
+    }else{
+        header("location: index.php");
+        exit();
+    }
+?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
