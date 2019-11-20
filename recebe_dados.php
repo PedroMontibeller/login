@@ -99,6 +99,8 @@ if(isset($_POST['action'])){
                 $sql = $connect->prepare("UPDATE usuario SET token=?, tempoDeVida=DATE_ADD(NOW(), INTERVAL 5 MINUTE) WHERE emailUsuario =?");
                 $sql->bind_param("ss", $token, $email);
                 $sql->execute();
+                $link = "<a href='gerarSenha.php?email=$email&token=$token'>Clique Aqui para Gerar Nova Senha</a>";
+                echo $link;
             }else{
                 header("location:index.php");
             }

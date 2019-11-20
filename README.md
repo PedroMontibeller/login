@@ -1,6 +1,12 @@
 # login
 Sistema de login em PHP e Javascript
 
+# aula12 - 19/11/2019
+- Geração de nova senha
+
+# aula11 - 18/11/2019
+- Preparação para geração de uma nova senha
+
 # aula10 - 22/10/2019
 - Finalizado a autenticação com o perfil e cookies
 
